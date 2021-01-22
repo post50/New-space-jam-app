@@ -31,7 +31,7 @@ function processPlayers(allPlayerStats) {
         if (!stats || stats.length <= 1) continue; // empty line
 
         // The second column has the player name
-        var playerName = stats[nameIndex];
+        var playerName = stats[1];
 
         // check if player exists in map
         if (!playerMap.has(playerName)) {
@@ -40,7 +40,7 @@ function processPlayers(allPlayerStats) {
         }
 
         // Get per value for player
-        var per = parseFloat(stats[perIndex]);
+        var per = parseFloat(stats[9]);
 
         // Add per value to player's array (the next quarter)
         playerMap.get(playerName).push(per);
